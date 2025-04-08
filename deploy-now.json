@@ -1,6 +1,6 @@
 {
-  "framework": "static",
-  "output": ".",
+  "framework": "custom",
   "install": "./.deploy-now/build.sh",
-  "start": "gunicorn app:app --bind 0.0.0.0:8000"
+  "start": "gunicorn app:app --bind 0.0.0.0:8000",
+  "output": "."
 }
