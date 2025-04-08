@@ -16,9 +16,11 @@ HTML = """
 </form>
 """
 
-@app.route("/test")
-def test():
-    return "It works!"
+@app.route("/debug", defaults={"path": ""})
+@app.route("/debug/<path:path>")
+def debug(path):
+    from flask import request
+    return f"Request path: {request.path}"
 
 @app.route("/", methods=["GET", "POST"])
 def upload_files():
