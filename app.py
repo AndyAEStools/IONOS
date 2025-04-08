@@ -16,6 +16,10 @@ HTML = """
 </form>
 """
 
+@app.route("/test")
+def test():
+    return "It works!"
+
 @app.route("/", methods=["GET", "POST"])
 def upload_files():
     if request.method == "POST":
