@@ -1,1 +1,1 @@
-web: gunicorn app:app --bind 0.0.0.0:8000
+web: gunicorn -w 1 -k gthread --threads 2 --timeout 120 app:app
